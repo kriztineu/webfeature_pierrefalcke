@@ -27,3 +27,7 @@ p {
   font-weight: normal;
   color: var(--primary);
 }
+
+img {
+  height: 100vh;
+}

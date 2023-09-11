@@ -15,11 +15,11 @@ html {
 
   block-size: 100%;
 
-  color: var(--gray-7);
+  /* color: var(--gray-7);
 
   font-family: var(--font-sans);
 
-  line-height: var(--font-lineheight-3);
+  line-height: var(--font-lineheight-3); */
 }
 
 body {
@@ -30,8 +30,6 @@ img,
 picture,
 video,
 svg {
-  display: block;
-
   max-width: 100%;
 }
 
@@ -64,7 +62,7 @@ h6 {
 h1,
 h2,
 h3 {
-  color: var(--gray-9);
+  /* color: var(--primary); */
 
   line-height: var(--font-lineheight-0);
 }
