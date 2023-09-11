@@ -1,6 +1,6 @@
 * {
   --primary: #f6f8ee;
-  background-image: url(..images/baggrund.png);
+  background-image: url(../assets/images/baggrund.png);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,12 +11,14 @@ h2 {
   font-family: "Kanit", sans-serif;
   font-size: 64px;
   font-weight: bold;
+  color: var(--primary);
 }
 
 h3 {
   font-family: "Kanit", sans-serif;
   font-size: 40px;
   font-weight: 500;
+  color: var(--primary);
 }
 
 p {
