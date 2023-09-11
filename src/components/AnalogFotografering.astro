@@ -1,0 +1,11 @@
+---
+const {overskrift} ,  {tekst} , {image} , {mindre_skrift}= Astro.props
+---
+
+<section>
+   <h2>{overskrift}</h2>
+   <p>{tekst}</p>
+   <div>
+   <img src={image} alt="billede" />
+   <p>{mindre_skrift}</p>
+</section>
