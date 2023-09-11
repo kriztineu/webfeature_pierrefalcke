@@ -11,8 +11,10 @@ Analog fotografering kan gå galt mange steder i processen, og det giver også m
 
 <section class="glitch_box">
     <img src="src/assets/images/glitch.webp" alt="baad">
-    <h3>Glitsch art</h3>
+    <div class="glitch_tekst">
+    <h3 class="glitch_h3">Glitsch art</h3>
     <p>Når der sker en teknisk fejl i et medie/en kommunikationskanal kaldes det en glitch. Glitch art går ud på at dyrke fejlene for at skabe kunst. En meget typisk glitch er små analoge eller digitale fejl i farvegengivelsen af billeder.</p>
+    </div>
 </section>
 
 <section>
@@ -44,4 +46,23 @@ Det kan måske lyde lidt anti-fotograf-agtigt. Men en del foto-entusiaster dyrke
     .slide_tekst {
         
     }
+
+.glitch_box{
+  position: relative;
+  text-align: left;
+    }
+.glitch_tekst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.glitch_h3 {
+    text-align: left;
+}
+
+li {
+      margin: 20px auto;
+}
 </style>
