@@ -47,8 +47,3 @@ p {
 li {
   color: var(--primary);
 }
-
-img {
-  height: 100vh;
-  width: 100%;
-}
