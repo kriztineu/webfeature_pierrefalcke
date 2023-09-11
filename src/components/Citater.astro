@@ -3,24 +3,17 @@ const {citat}= Astro.props;
 ---
 
 <section>
-    <div class="tegn1">"</div><p class="citat">{citat}</p><div class="tegn2">"</div>
+    <p class="citat">{citat}</p>
 </section>
 
 <style>
-.tegn1, .tegn2 {
-    font-weight: var(--font-weight-7);
-    font-size: 90px;
-    font-family: "Kanit", sans-serif;
-    display: inline;
-     color: var(--primary);
-}
+
 
 .citat {
     font-size: var(--font-size-5);
     font-family: "Kanit", sans-serif;
-    display: inline;
-    max-width: 500px;
-    margin: 90 auto;
+    max-width: 650px;
+    margin: auto;
+    line-height: var(--font-lineheight-2);
 }
-
 </style>
