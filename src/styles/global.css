@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+img {
+  height: 750px;
+  aspect-ratio: var(--ratio-ultrawide);
+}
+
 main {
   background-image: url(../assets/images/baggrund.png);
 }
