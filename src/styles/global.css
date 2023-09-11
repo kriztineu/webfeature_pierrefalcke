@@ -44,6 +44,10 @@ p {
   padding: 0 10px;
 }
 
+li {
+  color: var(--primary);
+}
+
 img {
   height: 100vh;
 }
