@@ -1,9 +1,12 @@
 * {
   --primary: #f6f8ee;
-  background-image: url(../assets/images/baggrund.png);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+main {
+  background-image: url(../assets/images/baggrund.png);
 }
 
 h1,
