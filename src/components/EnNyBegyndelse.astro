@@ -6,8 +6,6 @@ const images = await Astro.glob("/src/assets/images/*").then((files) => {
   return files.map((file) => file.default);
 });
 ---
-
-
 <article>
     <h2>hej med dig</h2>
     <Image src={nybegyndelse} alt="Københavnerbilleder bogforside" class="forfatterfoto" />
