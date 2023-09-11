@@ -1,0 +1,22 @@
+---
+import {Image} from "astro:assets";
+import nybegyndelse from "../assets/images/nybegyndelse.webp";
+
+const images = await Astro.glob("/src/assets/images/*").then((files) => {
+  return files.map((file) => file.default);
+});
+---
+
+
+<article>
+    <h2>hej med dig</h2>
+    <Image src={nybegyndelse} alt="Københavnerbilleder bogforside" class="forfatterfoto" />
+    <p>hvad hedder du</p>
+</article>
+
+<style>
+    .billede{
+        width: 100%;
+    }
+</style>
+  
