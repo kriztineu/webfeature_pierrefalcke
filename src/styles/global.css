@@ -3,15 +3,22 @@
   background-image: url(..images/baggrund.png);
 }
 
-h1 {
-}
-
+h1,
 h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 64px;
+  font-weight: bold;
 }
 
 h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
 }
 
 p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
   color: var(--primary);
 }
