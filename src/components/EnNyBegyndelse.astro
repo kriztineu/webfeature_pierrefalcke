@@ -5,20 +5,24 @@ import Citater from "../components/Citater.astro";
 <section>
     <h1>En ny begyndelse</h1>
     <p>Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. Han glæder sig over hver dags kunstneriske eksperimenter, og er for første gang i sit liv rigtig stolt af sit arbejde. Som Pierre selv udtrykker det:</p>
-    <img src="src/assets/images/nybegyndelse.webp" alt="">
+    <img class="billede" src="src/assets/images/nybegyndelse.webp" alt="">
     <p>Karrieren begynder også så småt også at gå den rette vej: Pierre er begyndt at sælge fotokunst på nettet, og har udgivet sin første foto-bog med titlen “Lidt i fem,” som er en fotografisk odyssé om at slæbe en brandert hjem i de tidlige morgentimer. I forbindelse med udgivelsen af bogen, har han en udstilling på vej i det Kongelige Biblioteks fotoudstilling. Som Pierre forklarer det:</p>
 </section>
 
 <section class="container">
-    <img src="src/assets/images/nybegyndelse2.webp" alt="">
+    <img class="billede2" src="src/assets/images/nybegyndelse2.webp" alt="">
     <div class="text">
         <Citater citat=" Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt.">
     </div>
 </section>
 
 <style>
+.billede{
+    aspect-ratio: var(--ratio-ultrawide); 
+    block-size: 480px;   
+}
   .container{
-        position: relative;
+ position: relative;
   text-align: center;
     }
 .text {
@@ -26,6 +30,11 @@ import Citater from "../components/Citater.astro";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.billede2{
+    aspect-ratio: var(--ratio-ultrawide);    
+
 }
 </style>
   
