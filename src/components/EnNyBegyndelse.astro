@@ -3,7 +3,7 @@ import Citater from "../components/Citater.astro";
 
 ---
 <section>
-    <h1>En ny begyndelse</h1>
+    <h1 class="overskrift1">En ny begyndelse</h1>
     <p>Men Pierre er glad for sin beslutning. Indkomsten er lavere nu, men han har stadig lidt penge på kontoen, og studerer nu kunstfotografering på fotoskolen Fatamorgana. Han glæder sig over hver dags kunstneriske eksperimenter, og er for første gang i sit liv rigtig stolt af sit arbejde. Som Pierre selv udtrykker det:</p>
        <div class="citat1"><Citater citat=" Det interessante ligger i fejlen. Et foto med masser af fejl er interessant. Jeg eksperimenterer med udstyr og teknik, og skaber nye visuelle udtryk. Det uperfekte er perfekt."></div>
 </section>
@@ -51,3 +51,34 @@ import Citater from "../components/Citater.astro";
 }
 </style>
   
+<script>
+import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+
+    gsap.from(".overskrift1", {
+      x: 500,
+      scale: 2,
+      opacity: 0,
+      duration: 5,
+      ease: "elastic.out(1, 0.3)",
+      scrollTrigger: {
+        trigger: ".overskrift1",
+        start: "start 80%",
+        end: "bottom 20%",
+        toggleActions: "play pause none reverse",
+        //markers: true,
+      },
+    });
+
+    gsap.from(".billede", {
+    x: -500,
+    duration: 5,
+    scrollTrigger: ".billede",
+  });
+
+   
+  });
+</script>
