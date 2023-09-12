@@ -14,6 +14,10 @@ const {citat}= Astro.props;
 
 <style>
 
+svg {
+  width: 70px;
+  height: 0px;
+}
 
 .citater {
     display: flex;
@@ -33,6 +37,7 @@ const {citat}= Astro.props;
     margin: auto;
     line-height: var(--font-lineheight-2);
 }
+
 }
 
 @media(max-width: 600px){
@@ -43,5 +48,11 @@ const {citat}= Astro.props;
     margin: auto;
     line-height: var(--font-lineheight-1);
     }
+
+  svg {
+    width: 30px; 
+    height: 30px; 
+  }
 }
+
 </style>
