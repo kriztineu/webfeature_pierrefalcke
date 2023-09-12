@@ -1,8 +1,8 @@
 
 
 <section class="faktaboks">
-    <h4>
-    "Pierre sælger 2 millioner fotos om året. Det svarer til én fotolicens hvert 16. sekund. Du ser hans fotos ca. 2 gange om dagen"</h4>
+    <p class="tekst">
+    "Pierre sælger 2 millioner fotos om året. Det svarer til én fotolicens hvert 16. sekund. Du ser hans fotos ca. 2 gange om dagen"</p>
 </section>
 
 <style>
@@ -12,8 +12,26 @@
         grid-template-rows: 1fr 1fr 1fr;
     }
 
-    h4 {
+    .tekst{
         grid-column: 1;
         grid-row: 2;
     }
+
+    @media(max-width: 800px){
+    .tekst {
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+    line-height: var(--font-lineheight-1);
+    }}
+
+    @media(min-width: 800px){
+.tekst {
+    font-size: var(--font-size-5);
+    font-family: "Kanit", sans-serif;
+    max-width: 600px;
+    line-height: var(--font-lineheight-2);
+}
+
+}
+
 </style>
