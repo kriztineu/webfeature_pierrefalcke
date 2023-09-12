@@ -73,12 +73,21 @@ import { gsap } from "gsap";
       },
     });
 
-    gsap.from(".billede", {
-    x: -500,
-    duration: 5,
-    scrollTrigger: ".billede",
-  });
+  gsap.from(".citat1", {
+      yPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".citat1",
+        start: "start 90%",
+        end: "bottom 10%",
+        scrub: true,
+        markers: true,
+      },
+    });
 
    
   });
 </script>
+
