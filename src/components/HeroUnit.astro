@@ -44,11 +44,16 @@ import PoloraidBilleder from "./PoloraidBilleder.astro";
     font-family: "Kanit", sans-serif;
     max-width: 600px;
     margin: auto;
-    line-height: var(--font-lineheight-2);
     left: 10%;
     top: 30%;
     z-index: 100;
 }
+
+ @media(max-width: 800px){
+    .textPierre {
+    font-size: 18px;
+    line-height: var(--font-lineheight-1);
+    }}
 
 .imgPierre {
     filter: brightness(50%);
