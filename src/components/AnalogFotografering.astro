@@ -23,44 +23,30 @@ Analog fotografering kan gå galt mange steder i processen, og det giver også m
 Det kan måske lyde lidt anti-fotograf-agtigt. Men en del foto-entusiaster dyrker den slags, og ser det som en foto-genre eller endda en livsstil.</p>
 </section>
 
-<!-- <section>
-    <img src="src/assets/images/lomografi.webp" alt="lady">
-    <h3 class="lomo-regler">Lomo-regler</h3>
-    <p>Der er et stort community af lomografer på Lomography.com, og hardcore lomografer har 10 regler, de lever efter (se lomography.com/about/the-ten-golden-rules for yderligere info):</p>
-    <ol class="slide_tekst">
-        <li>Tag kameraet med overalt</li>
-        <li>Brug det på alle tidspunkter – dag og nat</li>
-        <li>Lomografi er ikke en forstyrrelse af dit liv, men en del af det</li>
-        <li>Prøv hofteskuddet!</li>
-        <li>Gå tæt på de objekter du har et ønske om at lomografere</li>
-        <li>Tænk ikke (William Firebrace)</li>
-        <li>Vær hurtig</li>
-        <li>Du behøver ikke at vide hvad du fanger på film på forhånd</li>
-        <li>Heller ikke efter</li>
-        <li>Du skal ikke bekymre dig om nogen regler </li>     
-    </ol>
-</section> -->
-
 <section class="lomo">
     <img src="src/assets/images/lomografi.webp" alt="lady">
-    <h3 class="lomo-regler">Lomo-regler</h3>
-    <p>Der er et stort community af lomografer på Lomography.com, og hardcore lomografer har 10 regler, de lever efter (se lomography.com/about/the-ten-golden-rules for yderligere info):</p>
+    <div class="flyvind"><h3 class="lomo-regler">Lomo-regler</h3>
+    <p>Der er et stort community af lomografer på Lomography.com, og hardcore lomografer har 10 regler, de lever efter (se lomography.com/about/the-ten-golden-rules for yderligere info):</p></div>
     <ol class="slide_tekst">
-        <li>Tag kameraet med overalt</li>
-        <li>Brug det på alle tidspunkter – dag og nat</li>
-        <li>Lomografi er ikke en forstyrrelse af dit liv, men en del af det</li>
-        <li>Prøv hofteskuddet!</li>
-        <li>Gå tæt på de objekter du har et ønske om at lomografere</li>
-        <li>Tænk ikke (William Firebrace)</li>
-        <li>Vær hurtig</li>
-        <li>Du behøver ikke at vide hvad du fanger på film på forhånd</li>
-        <li>Heller ikke efter</li>
-        <li>Du skal ikke bekymre dig om nogen regler </li>     
+        <li class="li1">Tag kameraet med overalt</li>
+        <li class="li2">Brug det på alle tidspunkter – dag og nat</li>
+        <li class="li3">Lomografi er ikke en forstyrrelse af dit liv, men en del af det</li>
+        <li class="li4">Prøv hofteskuddet!</li>
+        <li class="li5">Gå tæt på de objekter du har et ønske om at lomografere</li>
+        <li class="li6">Tænk ikke (William Firebrace)</li>
+        <li class="li7">Vær hurtig</li>
+        <li class="li8">Du behøver ikke at vide hvad du fanger på film på forhånd</li>
+        <li class="li9">Heller ikke efter</li>
+        <li class="li10">Du skal ikke bekymre dig om nogen regler </li>     
     </ol>
 </section>
 
 
 <style>
+
+  .li10 {
+    margin-bottom: 500px;
+  }
 
 .glitch_image {
     opacity: 50%;
@@ -172,5 +158,158 @@ padding-bottom: 200px;
 .slide_tekst {
       margin-left: 90px;
 }
-
 </style>
+
+ 
+<script>
+import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+
+  gsap.from(".li1", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li1",
+        start: "start 100%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+      gsap.from(".li2", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li2",
+        start: "start 95%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+          gsap.from(".li3", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li3",
+        start: "start 90%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+          gsap.from(".li4", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li4",
+        start: "start 85%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+          gsap.from(".li5", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li5",
+        start: "start 80%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+          gsap.from(".li6", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li6",
+        start: "start 75%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+
+          gsap.from(".li7", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li7",
+        start: "start 70%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+          gsap.from(".li8", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li8",
+        start: "start 65%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+          gsap.from(".li9", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li9",
+        start: "start 60%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+      gsap.from(".li10", {
+      xPercent: 50,
+      opacity: 3,
+      duration: 1,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".li10",
+        start: "start 55%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+
+  });
+</script>
+
