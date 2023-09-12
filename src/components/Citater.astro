@@ -25,12 +25,23 @@ const {citat}= Astro.props;
     fill:var(--primary);
 }
 
+@media(min-width: 600px){
 .citat {
     font-size: var(--font-size-5);
     font-family: "Kanit", sans-serif;
     max-width: 600px;
     margin: auto;
     line-height: var(--font-lineheight-2);
-    
+}
+}
+
+@media(max-width: 600px){
+    .citat {
+    font-size: 25px;
+    font-family: "Kanit", sans-serif;
+    max-width: 400px;
+    margin: auto;
+    line-height: var(--font-lineheight-1);
+    }
 }
 </style>
