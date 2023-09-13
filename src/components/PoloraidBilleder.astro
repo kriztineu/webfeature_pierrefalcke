@@ -1,22 +1,45 @@
-<section class="billeder">
-    <img src="src/assets/images/stock1.webp" alt="">
-    <img src="src/assets/images/stock2.webp" alt="">
-    <img src="src/assets/images/stock3.webp" alt="">
-    <img src="src/assets/images/stock4.webp" alt="">
-    <img src="src/assets/images/stock5.webp" alt="">
-</section>
+<div class="wrapper">
+
+    <div class="container">
+
+        <section class="billeder">
+            <img src="src/assets/images/stock1.webp" alt="">  
+        </section>
+
+        <section class="billeder">
+            <img src="src/assets/images/stock2.webp" alt="">
+        </section>
+
+        <section class="billeder">
+            <img src="src/assets/images/stock3.webp" alt="">
+        </section>
+
+        <section class="billeder">
+            <img src="src/assets/images/stock4.webp" alt="">
+        </section>
+
+        <section class="billeder">
+            <img src="src/assets/images/stock5.webp" alt="">
+        </section>
+    </div>
+</div>
+
+    
+
 
 <style>
-    .billeder {
-        display: flex;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        gap: var(--size-3)
+    .wrapper {
+        overflow-x: hidden;
+        position: relative;
     }
-    .billeder img {
+    .container {
+        display: flex;
+        gap: var(--size-2);
+        width: 250vw;
+    }
+    
+    .container .billeder img {
         aspect-ratio: var(--ratio-box);
-        
     }
 </style>
 
@@ -26,14 +49,16 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
         
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".billeder", {
-    scrollTrigger: {
-        trigger: ".billeder",
-        start: "top top",
-        end: "bottom bottom", // Adjust the end point as needed
-        scrub: 1, // Enables smooth scrolling
-        markers: true,
-    },
-});
+const sections = gsap.utils.toArray('.container section')
 
+gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".container",
+        pin: true,
+        scrub: 1, 
+        end: "+=3000",
+      }
+})
 </script>
