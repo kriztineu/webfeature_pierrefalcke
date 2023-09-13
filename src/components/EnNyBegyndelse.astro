@@ -57,11 +57,13 @@ import { gsap } from "gsap";
   gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
 
     gsap.from(".overskrift1", {
-      x: 500,
-      scale: 2,
+      //x: 500,
+      //scale: 2,
       opacity: 0,
       duration: 5,
-      ease: "elastic.out(1, 0.3)",
+      //ease: "elastic.out(1, 0.3)",
+      rotation: 360,
+      ease: "bounce.out",
       scrollTrigger: {
         trigger: ".overskrift1",
         start: "start 80%",
@@ -84,6 +86,14 @@ import { gsap } from "gsap";
         markers: true,
       },
     });
+
+
+  gsap.from(".billede2", {
+    x: -500,
+    duration: 5,
+    scrollTrigger: ".billede2",
+  });
+
 
   });
 </script>
