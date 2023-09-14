@@ -10,7 +10,7 @@ import Citater from "../components/Citater.astro";
 
 <section>
     <img class="billede" src="src/assets/images/nybegyndelse.webp" alt="">
-    <p>Karrieren begynder også så småt også at gå den rette vej: Pierre er begyndt at sælge fotokunst på nettet, og har udgivet sin første foto-bog med titlen “Lidt i fem,” som er en fotografisk odyssé om at slæbe en brandert hjem i de tidlige morgentimer. I forbindelse med udgivelsen af bogen, har han en udstilling på vej i det Kongelige Biblioteks fotoudstilling. Som Pierre forklarer det:</p>
+    <p class="karrieren">Karrieren begynder også så småt også at gå den rette vej: Pierre er begyndt at sælge fotokunst på nettet, og har udgivet sin første foto-bog med titlen “Lidt i fem,” som er en fotografisk odyssé om at slæbe en brandert hjem i de tidlige morgentimer. I forbindelse med udgivelsen af bogen, har han en udstilling på vej i det Kongelige Biblioteks fotoudstilling. Som Pierre forklarer det:</p>
 </section>
 
 <section class="container_nybegyndelse">
@@ -23,6 +23,11 @@ import Citater from "../components/Citater.astro";
 <style>
 .billede{
     aspect-ratio: var(--ratio-ultrawide); 
+}
+
+.karrieren {
+          margin-top: var(--size-12);
+        margin-bottom: var(--size-12);
 }
 
   .container_nybegyndelse{
@@ -68,7 +73,7 @@ import { gsap } from "gsap";
     gsap.from(".overskrift1", {
 scrollTrigger: {
         trigger: ".overskrift1",
-        start: "start 100%",
+        start: "start 80%",
         end: "bottom top",
         scrub: true,
 },
