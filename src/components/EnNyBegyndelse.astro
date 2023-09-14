@@ -59,6 +59,27 @@ import { gsap } from "gsap";
   gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
 
     gsap.from(".overskrift1", {
+scrollTrigger: {
+        trigger: ".overskrift1",
+        start: "start 100%",
+        end: "bottom top",
+        scrub: true,
+},
+    opacity:0,
+        duration: 2,
+        });
+
+            gsap.to(".overskrift1", {
+scrollTrigger: {
+        trigger: ".overskrift1",
+        start: "start top",
+        end: "start top",
+        scrub: true,
+},
+    opacity:100,
+        duration: 2,
+        });
+    /* gsap.from(".overskrift1", {
       //x: 500,
       //scale: 2,
       opacity: 0,
@@ -75,7 +96,7 @@ import { gsap } from "gsap";
       },
     });
 
-  /* gsap.from(".citat1", {
+  gsap.from(".citat1", {
       yPercent: 50,
       opacity: 3,
       duration: 1,
@@ -108,12 +129,11 @@ gsap.to(".citat1", {
 scrollTrigger: {
         trigger: ".citat1",
         start: "start top",
-        end: "bottom 10%",
+        end: "bottom 0%",
         scrub: true,
-        markers: true,
 },
         y: 600,
-        duration: 4,
+        duration: 5,
         });
 
         /*
