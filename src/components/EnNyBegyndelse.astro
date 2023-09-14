@@ -15,7 +15,9 @@ import Citater from "../components/Citater.astro";
 
 <section class="container_nybegyndelse">
     <img class="billede2" src="src/assets/images/nybegyndelse2.webp" alt="">
-    <div class="text"><Citater citat=" Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt."></div>
+    <div class="text">
+    <div class="textanimation"><Citater citat=" Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt."></div>
+    </div>
 </section>
 
 <style>
@@ -33,6 +35,11 @@ import Citater from "../components/Citater.astro";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.textanimation{
+  animation: var(--animation-pulse)
+
 }
 
 .citat1 {
