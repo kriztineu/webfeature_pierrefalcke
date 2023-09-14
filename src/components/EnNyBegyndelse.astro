@@ -69,8 +69,9 @@ import Citater from "../components/Citater.astro";
   
 <script>
 
-import { gsap } from "gsap";
+  import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
@@ -87,7 +88,7 @@ scrollTrigger: {
         });
 
             gsap.to(".overskrift1", {
-scrollTrigger: {
+  scrollTrigger: {
         trigger: ".overskrift1",
         start: "start top",
         end: "start top",
@@ -104,7 +105,7 @@ scrollTrigger: {
         end: "bottom 0%",
         scrub: true,
 },
-        y: 350,
+        y: 550,
         duration: 5,
         });
       
