@@ -15,7 +15,9 @@ import Citater from "../components/Citater.astro";
 
 <section class="container_nybegyndelse">
     <img class="billede2" src="src/assets/images/nybegyndelse2.webp" alt="">
-    <div class="text"><Citater citat=" Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt."></div>
+    <div class="text">
+    <div class="textanimation"><Citater citat=" Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt."></div>
+    </div>
 </section>
 
 <style>
@@ -33,6 +35,11 @@ import Citater from "../components/Citater.astro";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.textanimation{
+  animation: var(--animation-pulse)
+
 }
 
 .citat1 {
@@ -59,6 +66,27 @@ import { gsap } from "gsap";
   gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
 
     gsap.from(".overskrift1", {
+scrollTrigger: {
+        trigger: ".overskrift1",
+        start: "start 80%",
+        end: "bottom top",
+        scrub: true,
+},
+    opacity:0,
+        duration: 2,
+        });
+
+            gsap.to(".overskrift1", {
+scrollTrigger: {
+        trigger: ".overskrift1",
+        start: "start top",
+        end: "start top",
+        scrub: true,
+},
+    opacity:100,
+        duration: 2,
+        });
+    /* gsap.from(".overskrift1", {
       //x: 500,
       //scale: 2,
       opacity: 0,
@@ -75,7 +103,7 @@ import { gsap } from "gsap";
       },
     });
 
-  /* gsap.from(".citat1", {
+  gsap.from(".citat1", {
       yPercent: 50,
       opacity: 3,
       duration: 1,
@@ -108,12 +136,11 @@ gsap.to(".citat1", {
 scrollTrigger: {
         trigger: ".citat1",
         start: "start top",
-        end: "bottom 10%",
+        end: "bottom 0%",
         scrub: true,
-        markers: true,
 },
         y: 600,
-        duration: 4,
+        duration: 5,
         });
 
         /*
