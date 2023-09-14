@@ -1,13 +1,39 @@
 <div class="wrapper">
 
-    <div class="container">
+    <div class="container-h">
 
-        <section class="billeder">
+        <section class="panel">
+            <figure>
+            <img src="src/assets/images/nystock1.png" alt="">
+            </figure>
+        </section>
+        <section class="panel">
+            <figure>
+            <img src="src/assets/images/polo.png" alt="">
+            </figure>
+        </section>
+        <section class="panel">
+            <figure>
+            <img src="src/assets/images/polo.png" alt="">
+            </figure>
+        </section>
+        <section class="panel">
+            <figure>
+            <img src="src/assets/images/polo.png" alt="">
+            </figure>
+        </section>
+        <section class="panel">
+            <figure>
+            <img src="src/assets/images/polo.png" alt="">
+            </figure>
+        </section>
+
+        <!-- <section class="billeder">
             <img src="src/assets/images/polaroid.png" alt="">  
-        </section>
-        <section>
+        </section> -->
+        <!-- <section>
             <img src="src/assets/images/polaroid2.png" alt="">  
-        </section>
+        </section> -->
     </div>
 </div>
 
@@ -19,28 +45,35 @@
         overflow-x: hidden;
         position: relative;
     }
-    .container {
+    .container-h {
         display: flex;
         gap: var(--size-2);
+    }
+
+    .panel {
         width: 100vw;
+        flex-shrink: 0;
+    }
+    :global(body) {
+        overflow-x: hidden;
     }
 </style>
 
 <script>
-import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-        
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
-const sections = gsap.utils.toArray('.container section')
+const sections = gsap.utils.toArray('.panel')
 
 gsap.to(sections, {
       xPercent: -100 * (sections.length - 1),
       ease: "none",
       scrollTrigger: {
-        trigger: ".container",
+        trigger: ".container-h",
         pin: true,
-        scrub: 1, 
+        scrub: true, 
         end: "+=3000",
       }
 })
