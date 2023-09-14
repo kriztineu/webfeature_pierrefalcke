@@ -13,7 +13,7 @@ import Citater from "../components/Citater.astro";
     <p>Karrieren begynder også så småt også at gå den rette vej: Pierre er begyndt at sælge fotokunst på nettet, og har udgivet sin første foto-bog med titlen “Lidt i fem,” som er en fotografisk odyssé om at slæbe en brandert hjem i de tidlige morgentimer. I forbindelse med udgivelsen af bogen, har han en udstilling på vej i det Kongelige Biblioteks fotoudstilling. Som Pierre forklarer det:</p>
 </section>
 
-<section class="container">
+<section class="container_nybegyndelse">
     <img class="billede2" src="src/assets/images/nybegyndelse2.webp" alt="">
     <div class="text"><Citater citat=" Nu kan jeg leve livet igen. Jeg føler mig frisk. Jeg føler mig fri. Jeg føler mig genfødt."></div>
 </section>
@@ -23,7 +23,7 @@ import Citater from "../components/Citater.astro";
     aspect-ratio: var(--ratio-ultrawide); 
 }
 
-  .container{
+  .container_nybegyndelse{
  position: relative;
   text-align: center;
   
@@ -75,7 +75,7 @@ import { gsap } from "gsap";
       },
     });
 
-  gsap.from(".citat1", {
+  /* gsap.from(".citat1", {
       yPercent: 50,
       opacity: 3,
       duration: 1,
@@ -87,16 +87,47 @@ import { gsap } from "gsap";
         scrub: true,
         //markers: true,//
       },
-    });
+    }); 
 
+    gsap.to(".img", {
+scrollTrigger: {
+        trigger: ".citat1",
+        start: "start center",
+        end: "bottom center",
+        scrub: true,
+        //markers: true,//
+},
+        y: -200,
+        scale: 1,
+        duration: 2,
+        });
 
-  gsap.from(".billede2", {
-    x: -500,
-    duration: 5,
-    scrollTrigger: ".billede2",
-  });
+        */
 
+gsap.to(".citat1", {
+scrollTrigger: {
+        trigger: ".citat1",
+        start: "start top",
+        end: "bottom 10%",
+        scrub: true,
+        markers: true,
+},
+        y: 600,
+        duration: 4,
+        });
 
+        /*
+        gsap.from(".citat1", {
+scrollTrigger: {
+        trigger: ".citat1",
+        start: "start bottom",
+        end: "bottom 100%",
+        scrub: true,
+        markers: true,
+},
+        y: 600,
+        duration: 4, 
+        });*/
   });
 </script>
 
