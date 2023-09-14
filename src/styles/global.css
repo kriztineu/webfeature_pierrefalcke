@@ -72,6 +72,10 @@
   main {
     background-image: url(../assets/images/baggrund.png);
   }
+
+  img {
+    height: 40vh;
+  }
   h1,
   h2 {
     font-family: "Kanit", sans-serif;
