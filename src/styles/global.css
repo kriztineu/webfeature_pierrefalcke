@@ -8,7 +8,7 @@
 /*Desk*/
 @media (min-width: 700px) {
   img {
-    height: 750px;
+    height: 100vh;
     aspect-ratio: var(--ratio-ultrawide);
   }
 
