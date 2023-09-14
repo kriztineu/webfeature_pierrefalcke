@@ -13,7 +13,7 @@
   }
 
   main {
-    background-image: url(../assets/images/baggrund.png);
+    background-image: url(public/assets/images/baggrund.png);
   }
 
   h1,
