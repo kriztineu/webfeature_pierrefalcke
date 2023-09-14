@@ -1,6 +1,5 @@
 ---
 import Citater from "../components/Citater.astro";
-
 ---
 <section>
     <h1 class="overskrift1">En ny begyndelse</h1>
@@ -61,9 +60,15 @@ import Citater from "../components/Citater.astro";
     opacity: 50%; 
 }
 
+
+@media (max-width: 700px) {
+      .karrieren {
+        margin-top: var(--size-9);
+        margin-bottom: var(--size-9);}}
 </style>
   
 <script>
+
 import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
@@ -91,51 +96,6 @@ scrollTrigger: {
     opacity:100,
         duration: 2,
         });
-    /* gsap.from(".overskrift1", {
-      //x: 500,
-      //scale: 2,
-      opacity: 0,
-      duration: 5,
-      //ease: "elastic.out(1, 0.3)",
-      rotation: 360,
-      ease: "",
-      scrollTrigger: {
-        trigger: ".overskrift1",
-        start: "start 80%",
-        end: "bottom 20%",
-        toggleActions: "play pause none reverse",
-        //markers: true,
-      },
-    });
-
-  gsap.from(".citat1", {
-      yPercent: 50,
-      opacity: 3,
-      duration: 1,
-      stagger: 0.5,
-      scrollTrigger: {
-        trigger: ".citat1",
-        start: "start 90%",
-        end: "bottom 10%",
-        scrub: true,
-        //markers: true,//
-      },
-    }); 
-
-    gsap.to(".img", {
-scrollTrigger: {
-        trigger: ".citat1",
-        start: "start center",
-        end: "bottom center",
-        scrub: true,
-        //markers: true,//
-},
-        y: -200,
-        scale: 1,
-        duration: 2,
-        });
-
-        */
 
 gsap.to(".citat1", {
 scrollTrigger: {
@@ -144,22 +104,12 @@ scrollTrigger: {
         end: "bottom 0%",
         scrub: true,
 },
-        y: 600,
+        y: 350,
         duration: 5,
         });
+      
 
-        /*
-        gsap.from(".citat1", {
-scrollTrigger: {
-        trigger: ".citat1",
-        start: "start bottom",
-        end: "bottom 100%",
-        scrub: true,
-        markers: true,
-},
-        y: 600,
-        duration: 4, 
-        });*/
   });
+  
 </script>
 
