@@ -13,7 +13,7 @@
   }
 
   main {
-    background-image: url(public/assets/images/baggrund.png);
+    background-image: url(/assets/images/baggrund.png);
   }
 
   h1,
@@ -71,6 +71,10 @@
 @media (max-width: 700px) {
   main {
     background-image: url(../assets/images/baggrund.png);
+  }
+
+  img {
+    height: 40vh;
   }
   h1,
   h2 {
